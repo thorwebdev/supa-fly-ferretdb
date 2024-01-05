@@ -1,0 +1,22 @@
+# fly.toml app configuration file generated for supa-ferretdb on 2024-01-05T14:03:27+08:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "supa-ferretdb"
+primary_region = "sin"
+
+[build]
+  image = "ghcr.io/ferretdb/ferretdb"
+
+[[services]]
+  internal_port = 27017
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = "27017"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 1024
