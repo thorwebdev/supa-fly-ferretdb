@@ -2,7 +2,6 @@ import { MongoClient } from 'npm:mongodb'
 
 // Replace the uri string with your MongoDB deployment's connection string.
 const uri = Deno.env.get('MONGODB_URL')!
-console.log(uri)
 
 const client = new MongoClient(uri)
 

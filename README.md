@@ -26,7 +26,7 @@ export MONGODB_URL=mongodb://$DB_USER:$DB_PASSWORD@127.0.0.1:27017/ferretdb?auth
 # If you have mongodb installed locally
 mongosh '$MONGODB_URL'
 # If you don't have mongodb installed locally, run in docker container
-docker run --rm -it --network=ferretdb --entrypoint=mongosh mongo \
+docker run --rm -it --entrypoint=mongosh mongo \
  "$MONGODB_URL"
 
 # Test with MongoClient in TypeScript
