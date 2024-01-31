@@ -21,7 +21,7 @@ export DB_URL=postgres://$DB_USER.$SUPA_PROJECT_REF:$DB_PASSWORD@$SUPA_REGION.po
 docker run -p 27017:27017 -p 8080:8080 -e FERRETDB_POSTGRESQL_URL=$DB_URL ghcr.io/ferretdb/ferretdb
 
 # Consturct mongodb url
-export MONGODB_URL=mongodb://$DB_USER:$DB_PASSWORD@127.0.0.1:27017/ferretdb?authMechanism=PLAIN
+export MONGODB_URL=mongodb://$DB_USER.$SUPA_PROJECT_REF:$DB_PASSWORD@127.0.0.1:27017/ferretdb?authMechanism=PLAIN
 
 # Test with mongosh
 # If you have mongodb installed locally
