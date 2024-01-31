@@ -14,7 +14,8 @@
 export DB_USER=postgres
 export DB_PASSWORD=<your db password>
 export SUPA_PROJECT_REF=<your Supabase project ref>
-export DB_URL=postgresql://$DB_USER:$DB_PASSWORD@db.$SUPA_PROJECT_REF.supabase.co:5432/postgres
+export SUPA_REGION=<your project region>
+export DB_URL=postgres://$DB_USER.$SUPA_PROJECT_REF:$DB_PASSWORD@$SUPA_REGION.pooler.supabase.com:5432/postgres
 
 # Run FerretDB in docker container
 docker run -p 27017:27017 -p 8080:8080 -e FERRETDB_POSTGRESQL_URL=$DB_URL ghcr.io/ferretdb/ferretdb
